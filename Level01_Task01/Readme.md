@@ -36,3 +36,4 @@ This repository contains the landing page for "Burger Bar," a visually engaging 
    - **JavaScript**: Adds interactivity, such as generating stars and handling image toggles.
    - **Font Awesome**: Used for iconography, adding modern and responsive icons.
 
+![Screenshot 2024-08-23 121056](https://github.com/user-attachments/assets/c7e5cd61-dc03-4bcc-83aa-9f09ddf51585)
