@@ -1,0 +1,662 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  color: #ebe2e2;
+  background: #101c28
+  ;
+  
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: #051129;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 50;
+  margin-left: 35px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.navbar a:hover {
+  color: rgb(239, 118, 191);
+}
+.home {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  background: url(1stPageBackgroundd.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+
+.home-content {
+  max-width: 600px;
+}
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
+}
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+}
+.home-content h3 span {
+  color: #b4d4ed;
+}
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+.home-sci {
+  display: flex;
+  gap: 15px; /* Adjust gap between circles */
+}
+
+.home-sci a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Adjust width of circle */
+  height: 50px; /* Adjust height of circle */
+  background: transparent;
+  border: 2px solid #b4d4ed;
+  border-radius: 80%;
+  font-size: 25px; /* Adjust icon size */
+  color: #518dbc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+  background-color: #0a1824;
+  color: #b9229b;
+  box-shadow: 0 0 20px #0a1824;
+}
+.btn-box {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #0a1824;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #b9229b;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0a1824, 0 0 25px #0a1824;
+}
+.btn-box:hover {
+  box-shadow: 0 0 5px rgb(192, 134, 183), 0 0 25px rgb(192, 134, 183),
+    0 0 50px rgb(192, 134, 183), 0 0 100px rgb(192, 134, 183),
+    0 0 200px rgb(192, 134, 183);
+}
+
+
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+}
+.about-img img{
+  padding-bottom: 20%;
+  max-width: 630px;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+
+}
+.about-text h2{
+  font-size: 70px;
+}
+.about-text h2 span{
+  color: #57a9f0;
+}
+.about-text h4{
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-text p{
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+
+/*-------Skills-------*/
+#skills{
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+
+.sub-title{
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+}
+
+.sub-title span{
+  color: #518dbc;
+}
+.container{
+  padding: 90px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skills-list div {
+  background-color: #051129;
+  padding: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(81, 141, 188, 0.8), 
+              0 0 35px rgba(81, 141, 188, 0.6);
+  border: 1px solid rgba(81, 141, 188, 0.6);
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s, background 0.5s;
+}
+
+.skills-list div:hover {
+  transform: scale(1.05);
+  background-color: #0a1a3b;
+}
+
+.skills-list div i {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.skills-list div h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* Project Section */
+.projects {
+  padding: 80px 20px;
+  background-color: #051129; /* Matching background color */
+  color: #ebe2e2;
+}
+
+.projects .title {
+  font-size: 48px;
+  margin-bottom: 50px;
+  color: #4cd8cf; /* Accent color matching overall theme */
+}
+
+.title span{
+  color: #b4d4ed;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* General Card Styling for Consistency */
+.card {
+  background: #163957;  /* Matches the website's dark theme */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(81, 141, 188, 0.6); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 250px; /* Smaller card width */
+  margin: 10px auto;
+  cursor: pointer;
+  text-align: center;
+  color: #ebe2e2; /* Text color matching overall theme */
+}
+
+.card .box {
+  padding: 15px; /* Reduced padding for smaller cards */
+}
+
+.card img {
+  width: 100%;
+  height: 140px; /* Smaller image height */
+  object-fit: cover;
+  transition: transform 0.3s;
+  border-bottom: 3px solid #518dbc; /* Subtle border to enhance separation */
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card .text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #518dbc; /* Matching accent color */
+}
+
+.card p {
+  font-size: 14px;
+  color: #b4d4ed; /* Softer text color for readability */
+  line-height: 1.6;
+}
+
+/* Hover Effects */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(81, 141, 188, 0.8); /* Enhanced shadow on hover */
+}
+
+/* GitHub Link Button */
+.github-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #0a1824; /* Matches card background */
+  border-radius: 5px; /* Rounded corners for the box */
+  font-size: 14px;
+  color: #4cd8cf; /* Accent color */
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(81, 141, 188, 0.6); /* Box shadow */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.github-link:hover {
+  background-color: #052004;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Internships Section */
+.internships {
+  padding: 100px 5%; /* Reduced side padding for wider content coverage */
+  background: #101c28; /* Dark background for contrast */
+  color: #ebe2e2;
+  text-align: center; /* Center-align section title */
+}
+
+.internships .title {
+  font-size: 50px;
+  margin-bottom: 60px;
+  color: #4cd8cf; /* Accent color for the section title */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Modern look with slight letter spacing */
+}
+
+/* Center content and ensure it spans across the screen */
+.internship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 40px; /* Space between items */
+  justify-items: center; /* Center-align items within their grid cells */
+}
+
+/* Styling for each internship card */
+.internship-list div {
+  background: #1c2a3a; /* Slightly lighter background to distinguish from the section background */
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 0 15px rgba(81, 141, 188, 0.5); /* Softer shadow for a more refined appearance */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left; /* Left-align text within the card */
+  width: 100%; /* Make the card full width within its grid cell */
+  max-width: 1000px; /* Limit the width on larger screens for readability */
+}
+
+.internship-list div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(81, 141, 188, 0.8); /* Enhanced shadow on hover */
+}
+
+/* Text styling within each card */
+.internship-list div h3 {
+  font-size: 24px;
+  color: #b4d4ed; /* Accent color for titles */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.internship-list div p {
+  font-size: 16px;
+  color: #cfcfcf; /* Softer text color */
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.internship-list div .btn-box {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #4cd8cf; /* Matching button color */
+  border-radius: 5px;
+  color: #101c28;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.internship-list div .btn-box:hover {
+  background-color: #518dbc; /* Darker hover color */
+  transform: translateY(-3px);
+}
+
+/* Certifications Section */
+.certifications {
+  padding: 100px 20px;
+  background: #101c28; /* Darker background for contrast */
+  color: #ebe2e2; /* Lighter text color for better readability */
+  text-align: center; /* Center-align text */
+}
+
+.certifications .title {
+  font-size: 50px;
+  margin-bottom: 60px;
+  color: #4cd8cf; /* Accent color for the section title */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Slight letter spacing for a modern look */
+}
+
+.certification-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid layout */
+  gap: 40px; /* Space between items */
+  align-items: start;
+}
+
+.certification-list div {
+  background: none; /* Remove background */
+  padding: 0; /* Remove padding */
+  text-align: left; /* Left-align text for structured layout */
+}
+
+.certification-list div h3 {
+  font-size: 24px;
+  color: #b4d4ed; /* Accent color for titles */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.certification-list div p {
+  font-size: 16px;
+  color: #cfcfcf; /* Softer text color */
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.certification-list div .btn-box {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #4cd8cf; /* Matching button color */
+  border-radius: 5px;
+  color: #101c28;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.certification-list div .btn-box:hover {
+  background-color: #518dbc; /* Darker hover color */
+  transform: translateY(-3px);
+}
+
+
+
+/*------Contact------*/
+.contact {
+  padding: 90px 10%;
+  background: #101c28;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #0a1824;
+  color: #ebe2e2;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background: #0a1824;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #b9229b;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 5px #0a1824, 0 0 25px #0a1824;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 5px rgb(192, 134, 183), 0 0 25px rgb(192, 134, 183),
+              0 0 50px rgb(192, 134, 183), 0 0 100px rgb(192, 134, 183),
+              0 0 200px rgb(192, 134, 183);
+}
+
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background: #051129;
+  color: #ebe2e2;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+      transform: translateX(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .navbar a {
+      margin: 10px;
+  }
+  
+  .about, .skills, .internships, .certifications, .contact {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-img, .about-text {
+      width: 100%;
+  }
+
+  .skills-list div {
+      width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      right: -100%;
+      background: #fff;
+      transition: 0.5s;
+  }
+
+  .navbar a {
+      font-size: 1.5em;
+      margin: 15px 0;
+  }
+
+  .skills-list div {
+      width: calc(100% - 20px);
+  }
+
+  .header {
+      padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skills-list div {
+      width: 100%;
+  }
+}
